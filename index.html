@@ -7,7 +7,7 @@
   <body>
   <header>
     <nav>
-      <a href="/">
+      <a>
         <img src="img/logo.svg" alt="Логотип Glaccy">
       </a>
       <ul>
@@ -15,37 +15,57 @@
         <li><a href="delivery.html">Доставка и оплата</a></li>
         <li><a href="about.html">О компании</a></li>
       </ul>
-      <div>
-        <ul>
-          <li><button type="button">Поиск</button></li>
-          <li><button type="button">Вход</button></li>
-          <li><button type="button">Корзина</button></li>
-        </ul>
-      </div>
+      <ul>
+        <li><button type="button">Поиск</button></li>
+        <li><button type="button">Вход</button></li>
+        <li><button type="button">Корзина</button></li>
+      </ul>
       <div> <!-- как лучше разметить блок? -->
-        С 10 до 20, ежедневно
-        <span><a href="tel:88124504225">8 812 450-25-25</a></span>
+        <p>С 10 до 20, ежедневно</p>
+        <a href="tel:88124504225">8 812 450-25-25</a>
       </div>
     </nav>
-
   </header>
   <main>
     <h1>Glaccy - интернет-магазин вкуснейшего мороженого</h1>
     <section>
-      <h2>Крем-брюле и пломбир с малиновым джемом</h2>
-      <button type="button">Давайте оба!</button>
+      <article>
+        <h2>Крем-брюле и пломбир с малиновым джемом</h2>
+        <button type="button">Давайте оба!</button>
+      </article>
+      <article>
+        <h2>Пломбир с помадкой и клубничный щербет</h2>
+        <button type="button">Давайте оба!</button>
+      </article>
+      <article>
+        <h2>Шоколадный пломбир и лимонный сорбет</h2>
+        <button type="button">Давайте оба!</button>
+      </article>
+      <nav>
+        <ul>
+          <li>
+            <button type="button"></button>
+          </li>
+          <li>
+            <button type="button"></button>
+          </li>
+          <li>
+            <button type="button"></button>
+          </li>
+        </ul>
+      </nav>
     </section>
     <section>
       <h2>Акции</h2>
       <div>
         <h3>Малинка даром!</h3>
         <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-        <button type="button">Хочу варенье!</button>
+        <a href="#">Хочу варенье!</a>
       </div>
       <div>
         <h3>Шоколадки даром!</h3>
         <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-        <button type="button">Шоколадки!</button>
+        <a href="#">Шоколадки!</a>
       </div>
     </section>
     <section>
@@ -53,23 +73,23 @@
       <ul>
         <li>
           <img src="img/icecream1.jpg" alt="Сливочно-апельсиновое мороженое">
-          <p><a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></p>
-          <span>310&#8381;<sub>/кг</sub></span>
+          <p>310&#8381;<sub>/кг</sub></p>
+          <a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
         </li>
         <li>
           <img src="img/icecream2.jpg" alt="Сливочно-кофейное мороженое">
-          <p><a href="#">Сливочно-кофейное с кусочками шоколада</a></p>
-          <span>380&#8381;<sub>/кг</sub></span>
+          <p>380&#8381;<sub>/кг</sub></p>
+          <a href="#">Сливочно-кофейное с кусочками шоколада</a>
         </li>
         <li>
           <img src="img/icecream3.jpg" alt="Сливочно-клубничное мороженое">
-          <p><a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a></p>
-          <span>355&#8381;<sub>/кг</sub></span>
+          <p>355&#8381;<sub>/кг</sub></p>
+          <a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
         </li>
         <li>
           <img src="img/icecream4.jpg" alt="Мороженое крем-брюле">
-          <p><a href="#">Сливочное крем-брюле с карамельной подливкой</a></p>
-          <span>415&#8381;<sub>/кг</sub></span>
+          <p>415&#8381;<sub>/кг</sub></p>
+          <a href="#">Сливочное крем-брюле с карамельной подливкой</a>
         </li>
       </ul>
     </section>
@@ -94,23 +114,26 @@
         </li>
       </ul>
     </section>
-    <article>
+    <section>
       <h2>Новое в нашем блоге</h2>
-      <p><a href="#">10 способов сервировки фруктовых щербетов к столу</a></p>
-    </article>
+      <a href="#">10 способов сервировки фруктовых щербетов к столу</a>
+    </section>
     <section>
       <h2>Подписка на новости</h2>
       <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит.
         Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-      <!-- форма отправки email -->
+      <form action="#" method="post">
+        <input type="email" name="email" placeholder="email@example.com">
+        <button type="submit" name="email_submit" value="submitted">Отправить</button>
+      </form>
     </section>
     <section>
       <div>
         <h2>Адрес главного офиса и офлайн-магазина:</h2>
-        <p>ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
-        <p>Для заказов по телефону: <!-- как лучше разметить блок? -->
-        <b>8 812 450-25-25</b>
-        (с 10 до 20 ежедневно)</p>
+        <p><b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b></p>
+        <p>Для заказов по телефону:</p>
+        <a href="tel:88124502525">8 812 450-25-25</a>
+        <p>(с 10 до 20 ежедневно)</p>
         <button type="button">Форма обратной связи</button>
       </div>
     </section>
@@ -123,14 +146,14 @@
       <li><a href="#">Vkontakte</a></li>
     </ul>
     <ul>
-      <li><a href="#"><span>Для поставщиков</span></a></li> <!-- здесь будет сердечко и выделение полужирным -->
+      <li><a href="#"><b>Для поставщиков</b></a></li>
       <li><a href="#">О производстве</a></li>
       <li><a href="#">Наши документы</a></li>
       <li><a href="#">Экологическе стандарты</a></li>
     </ul>
     <div>
       <img src="img/academy.svg" alt="Логотип Академии">
-      <p>Сделано в HTML Academy © 2019</p>
+      <p>Сделано в <a href="https://htmlacademy.ru">HTML Academy</a> © 2019</p>
     </div>
   </footer>
   </body>

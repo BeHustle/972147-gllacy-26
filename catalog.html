@@ -11,100 +11,125 @@
         <img src="img/logo.svg" alt="Логотип Glaccy">
       </a>
       <ul>
-        <li><a href="/catalog.html">Каталог</a></li>
-        <li><a href="/delivery.html">Доставка и оплата</a></li>
-        <li><a href="/about.html">О компании</a></li>
+        <li><a href="catalog.html">Каталог</a></li>
+        <li><a href="delivery.html">Доставка и оплата</a></li>
+        <li><a href="about.html">О компании</a></li>
+      </ul>
+      <ul>
+        <li><button type="button">Поиск</button></li>
+        <li><button type="button">Вход</button></li>
+        <li><button type="button">Корзина</button></li>
       </ul>
       <div>
-        <ul>
-          <li><button type="button">Поиск</button></li>
-          <li><button type="button">Вход</button></li>
-          <li><button type="button">Корзина</button></li>
-        </ul>
-      </div>
-      <div> <!-- как лучше разметить блок? -->
-        С 10 до 20, ежедневно
-        <span><a href="tel:88124504225">8 812 450-25-25</a></span>
+        <p>С 10 до 20, ежедневно</p>
+        <a href="tel:88124504225">8 812 450-25-25</a>
       </div>
     </nav>
   </header>
   <main>
     <ul>
       <li><a href="/">Главная</a></li>
-      <li><a href="/catalog.html">Каталог</a></li>
-      <li><a href="#">Сливочное
-      </a></li>
+      <li><a href="">Каталог</a></li>
+      <li><a>Сливочное</a></li>
     </ul>
     <h1>Сливочное мороженое</h1>
-    <section><!-- секция с формой --></section>
+    <section>
+      <form action="#" method="get">
+        <p><label for="order">Сортировка:</label></p>
+        <select name="order" id="order">
+          <option value="popular">По популярности</option>
+          <option value="price">По цене</option>
+        </select>
+        <!-- ползунок выбора цены -->
+        <p>Жирность</p>
+        <input type="radio" name="fat" id="fat-0"><label for="fat-0">0%</label>
+        <input type="radio" name="fat" id="fat-to-10" checked><label for="fat-to-10">До 10%</label>
+        <input type="radio" name="fat" id="fat-to-30"><label for="fat-to-30">До 30%</label>
+        <input type="radio" name="fat" id="fat-more-30"><label for="fat-more-30">Выше 30%</label>
+        <p>Наполнители</p>
+        <input type="checkbox" name="chocolate" id="chocolate" checked><label for="chocolate">шоколадные</label>
+        <input type="checkbox" name="chocolate" id="sugar" checked><label for="sugar">сахарные присыпки</label>
+        <input type="checkbox" name="chocolate" id="fruits"><label for="fruits">фрукты</label>
+        <input type="checkbox" name="chocolate" id="syrup"><label for="syrup">сиропы</label>
+        <input type="checkbox" name="chocolate" id="jam"><label for="jam">джемы</label>
+        <button type="submit">Применить</button>
+      </form>
+    </section>
     <section>
       <h2>Товары</h2>
       <ul>
         <li>
           <img src="img/icecream1.jpg" alt="Сливочно-апельсиновое мороженое">
-          <p><a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></p>
-          <span>310&#8381;<sub>/кг</sub></span>
+          <p>310&#8381;<sub>/кг</sub></p>
+          <a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
         </li>
         <li>
           <img src="img/icecream2.jpg" alt="Сливочно-кофейное мороженое">
-          <p><a href="#">Сливочно-кофейное с кусочками шоколада</a></p>
-          <span>380&#8381;<sub>/кг</sub></span>
+          <p>380&#8381;<sub>/кг</sub></p>
+          <a href="#">Сливочно-кофейное с кусочками шоколада</a>
         </li>
         <li>
           <img src="img/icecream3.jpg" alt="Сливочно-клубничное мороженое">
-          <p><a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a></p>
-          <span>355&#8381;<sub>/кг</sub></span>
+          <p>355&#8381;<sub>/кг</sub></p>
+          <a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
         </li>
         <li>
           <img src="img/icecream4.jpg" alt="Мороженое крем-брюле">
-          <p><a href="#">Сливочное крем-брюле с карамельной подливкой</a></p>
-          <span>415&#8381;<sub>/кг</sub></span>
+          <p>415&#8381;<sub>/кг</sub></p>
+          <a href="#">Сливочное крем-брюле с карамельной подливкой</a>
         </li>
 
         <li>
           <img src="img/icecream5.jpg" alt="Мороженое с брусничным джемом">
-          <p><a href="#">Сливочное с брусничным джемом</a></p>
-          <span>325&#8381;<sub>/кг</sub></span>
+          <p>325&#8381;<sub>/кг</sub></p>
+          <a href="#">Сливочное с брусничным джемом</a>
         </li>
         <li>
           <img src="img/icecream6.jpg" alt="Сливочно-черничное мороженое">
-          <p><a href="#">Сливочно-черничное с цельными ягодами черники </a></p>
-          <span>410&#8381;<sub>/кг</sub></span>
+          <p>410&#8381;<sub>/кг</sub></p>
+          <a href="#">Сливочно-черничное с цельными ягодами черники </a>
         </li>
         <li>
           <img src="img/icecream7.jpg" alt="Сливочно-лимонное мороженое">
-          <p><a href="#">Сливочно-лимонное с карамельной присыпкой</a></p>
-          <span>375&#8381;<sub>/кг</sub></span>
+          <p>375&#8381;<sub>/кг</sub></p>
+          <a href="#">Сливочно-лимонное с карамельной присыпкой</a>
         </li>
         <li>
           <img src="img/icecream8.jpg" alt="Мороженое шоколадной стружкой">
-          <p><a href="#">Сливочное с шоколадной стружкой</a></p>
-          <span>320&#8381;<sub>/кг</sub></span>
+          <p>320&#8381;<sub>/кг</sub></p>
+          <a href="#">Сливочное с шоколадной стружкой</a>
         </li>
 
         <li>
           <img src="img/icecream9.jpg" alt="Сливочно-ванильное мороженое">
-          <p><a href="#">Сливочно-ванильное с кусочками шоколада</a></p>
-          <span>440&#8381;<sub>/кг</sub></span>
+          <p>440&#8381;<sub>/кг</sub></p>
+          <a href="#">Сливочно-ванильное с кусочками шоколада</a>
         </li>
         <li>
           <img src="img/icecream10.jpg" alt="Мороженое ментоловым сиропом">
-          <p><a href="#">Сливочноe с ментоловым сиропом</a></p>
-          <span>435&#8381;<sub>/кг</sub></span>
+          <p>435&#8381;<sub>/кг</sub></p>
+          <a href="#">Сливочноe с ментоловым сиропом</a>
         </li>
         <li>
           <img src="img/icecream11.jpg" alt="Мороженое с кусочками черного шоколада">
-          <p><a href="#">Сливочное с кусочками черного шоколада</a></p>
-          <span>355&#8381;<sub>/кг</sub></span>
+          <p>355&#8381;<sub>/кг</sub></p>
+          <a href="#">Сливочное с кусочками черного шоколада</a>
         </li>
         <li>
           <img src="img/icecream12.jpg" alt="Мороженое с мятным сиропом">
-          <p><a href="#">Сливочное с мятным сиропом</a></p>
-          <span>420&#8381;<sub>/кг</sub></span>
+          <p>420&#8381;<sub>/кг</sub></p>
+          <a href="#">Сливочное с мятным сиропом</a>
         </li>
       </ul>
+      <ul>
+        <li><a>1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#">&#62;</a></li>
+      </ul>
     </section>
-    <section><!-- пагинация --></section>
   </main>
   <footer>
     <ul>
@@ -114,14 +139,14 @@
       <li><a href="#">Vkontakte</a></li>
     </ul>
     <ul>
-      <li><a href="#"><span>Для поставщиков</span></a></li> <!-- здесь будет сердечко и выделение полужирным -->
+      <li><a href="#">Для поставщиков</a></li>
       <li><a href="#">О производстве</a></li>
       <li><a href="#">Наши документы</a></li>
       <li><a href="#">Экологическе стандарты</a></li>
     </ul>
     <div>
       <img src="img/academy.svg" alt="Логотип Академии">
-      <p>Сделано в HTML Academy © 2019</p>
+      <p>Сделано в <a href="https://htmlacademy.ru">HTML Academy</a> © 2019</p>
     </div>
     </footer>
   </body>
