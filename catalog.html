@@ -3,17 +3,20 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
   <header>
-    <nav>
+    <nav class="main-navigation">
       <a href="/">
         <img src="img/logo.svg" width="154" height="64"  alt="Логотип Glaccy">
       </a>
-      <ul>
+      <ul class="nav-items">
         <li>
           <a href="catalog.html">Каталог</a>
-          <ul class="visually-hidden"> <!-- оставить этот блок здесь? -->
+          <ul class="d-none">
             <li><a href="#"><b>Новинки</b></a></li>
             <li><a href="#">Сливочное</a></li>
             <li><a href="#">Щербеты</a></li>
@@ -25,25 +28,62 @@
         <li><a href="about.html">О компании</a></li>
       </ul>
       <ul>
-        <li><button type="button">Поиск</button></li>
-        <li><button type="button">Вход</button></li>
-        <li><button type="button">2 товара</button></li>
+        <li>
+          <button type="button" class="btn btn-search">Поиск</button>
+          <form action="#" method="get" name="search" class="d-none">
+            <input type="search" placeholder="Поиск">
+          </form>
+        </li>
+        <li>
+          <button type="button" class="btn btn-login">Вход</button>
+          <form action="#" method="post" name="auth" class="d-none">
+            <input type="email" placeholder="email@example.com">
+            <input type="password" placeholder="password">
+            <button type="submit">Войти</button>
+            <a href="#">Забыли пароль?</a>
+            <a href="#">Новая регистрация</a>
+          </form>
+        </li>
+        <li>
+          <button type="button" class="btn btn-basket-full">2 товара</button>
+          <section class="d-none">
+            <h2 class="visually-hidden">Корзина</h2>
+            <table>
+              <tr>
+                <td><button type="button" aria-label="Удалить товар">X</button></td>
+                <td><img src="img/icecream1-small.png" alt="Сливочно-апельсиновое мороженое" width="33" height="33"></td>
+                <td>Пломбир с апельсиновым джемом</td>
+                <td>1,5 кг Х 200 руб.</td>
+                <td>300 руб.</td>
+              </tr>
+              <tr>
+                <td><button type="button" aria-label="Удалить товар">X</button></td>
+                <td><img src="img/icecream3-small.png" alt="Сливочно-клубничное мороженое" width="33" height="33"></td>
+                <td>Клубничный пломбир с присыпкой из белого шоколада</td>
+                <td>1,5 кг Х 300 руб.</td>
+                <td>450 руб.</td>
+              </tr>
+            </table>
+            <p><b>Итого: 750 руб.</b></p>
+            <a href="#">Оформить заказ</a>
+          </section>
+        </li>
       </ul>
-      <div>
+      <div class="contact-tel">
         <p>С 10 до 20, ежедневно</p>
         <a href="tel:88124504225">8 812 450-25-25</a>
       </div>
     </nav>
   </header>
-  <main>
-    <ul>
+  <main class="creamy-main">
+    <ul class="breadcrumbs nav-items">
       <li><a href="/">Главная</a></li>
       <li><a href="">Каталог</a></li>
-      <li><a>Сливочное</a></li>
+      <li>Сливочное</li>
     </ul>
-    <h1 class="visually-hidden">Сливочное мороженое</h1>
+    <h1>Сливочное мороженое</h1>
     <section>
-      <form action="#" method="get" name="filter">
+      <form action="#" method="get" name="filter" class="filter-form">
         <fieldset>
           <legend><label for="order">Сортировка:</label></legend>
           <select name="order" id="order">
@@ -53,9 +93,12 @@
             <option value="fat">По жирности</option>
           </select>
         </fieldset>
-        <!-- ползунок выбора цены -->
         <fieldset>
-        <legend>Жирность</legend>
+          <legend>Цена 100 руб. - 500 руб.</legend>
+          <!-- ползунок выбора цены -->
+        </fieldset>
+        <fieldset>
+          <legend>Жирность</legend>
           <ul>
             <li><label><input type="radio" name="fat" value="0">0%</label></li>
             <li><label><input type="radio" name="fat" value="to10" checked>До 10%</label></li>
@@ -64,92 +107,94 @@
           </ul>
         </fieldset>
         <fieldset>
-        <legend>Наполнители</legend>
-          <li><label><input type="checkbox" name="chocolate" checked>шоколадные</label></li>
-          <li><label><input type="checkbox" name="sugar" checked>сахарные присыпки</label></li>
-          <li><label><input type="checkbox" name="fruits">фрукты</label></li>
-          <li><label><input type="checkbox" name="syrup">сиропы</label></li>
-          <li><label><input type="checkbox" name="jam">джемы</label></li>
+          <legend>Наполнители</legend>
+          <ul>
+            <li><label><input type="checkbox" name="chocolate" checked>шоколадные</label></li>
+            <li><label><input type="checkbox" name="sugar" checked>сахарные присыпки</label></li>
+            <li><label><input type="checkbox" name="fruits">фрукты</label></li>
+            <li><label><input type="checkbox" name="syrup">сиропы</label></li>
+            <li><label><input type="checkbox" name="jam">джемы</label></li>
+          </ul>
         </fieldset>
         <button type="submit">Применить</button>
       </form>
     </section>
-    <section>
-      <h2>Товары</h2>
+    <section class="products">
+      <h2 class="visually-hidden">Товары</h2>
       <ul>
         <li>
           <img src="img/icecream1.png" width="267" height="267" alt="Сливочно-апельсиновое мороженое">
-          <p>310&#8381;<sub>/кг</sub></p>
+          <p>310&#8381;<span>/кг</span></p>
           <a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
-          <button type="button" class="visually-hidden">Быстрый просмотр</button>
+          <button type="button">Быстрый просмотр</button>
         </li>
         <li>
           <img src="img/icecream2.png" width="267" height="267" alt="Сливочно-кофейное мороженое">
-          <p>380&#8381;<sub>/кг</sub></p>
+          <p>380&#8381;<span>/кг</span></p>
           <a href="#">Сливочно-кофейное с кусочками шоколада</a>
-          <button type="button" class="visually-hidden">Быстрый просмотр</button>
+          <button type="button">Быстрый просмотр</button>
         </li>
         <li>
           <img src="img/icecream3.png" width="267" height="267" alt="Сливочно-клубничное мороженое">
-          <p>355&#8381;<sub>/кг</sub></p>
+          <p>355&#8381;<span>/кг</span></p>
           <a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
-          <button type="button" class="visually-hidden">Быстрый просмотр</button>
+          <button type="button">Быстрый просмотр</button>
         </li>
         <li>
           <img src="img/icecream4.png" width="267" height="267" alt="Мороженое крем-брюле">
-          <p>415&#8381;<sub>/кг</sub></p>
+          <p>415&#8381;<span>/кг</span></p>
           <a href="#">Сливочное крем-брюле с карамельной подливкой</a>
-          <button type="button" class="visually-hidden">Быстрый просмотр</button>
+          <button type="button">Быстрый просмотр</button>
         </li>
 
         <li>
           <img src="img/icecream5.png" width="267" height="267" alt="Мороженое с брусничным джемом">
-          <p>325&#8381;<sub>/кг</sub></p>
+          <p>325&#8381;<span>/кг</span></p>
           <a href="#">Сливочное с брусничным джемом</a>
-          <button type="button" class="visually-hidden">Быстрый просмотр</button>
+          <button type="button">Быстрый просмотр</button>
         </li>
         <li>
           <img src="img/icecream6.png" width="267" height="267" alt="Сливочно-черничное мороженое">
-          <p>410&#8381;<sub>/кг</sub></p>
+          <p>410&#8381;<span>/кг</span></p>
           <a href="#">Сливочно-черничное с цельными ягодами черники </a>
-          <button type="button" class="visually-hidden">Быстрый просмотр</button>
+          <button type="button">Быстрый просмотр</button>
         </li>
         <li>
           <img src="img/icecream7.png" width="267" height="267" alt="Сливочно-лимонное мороженое">
-          <p>375&#8381;<sub>/кг</sub></p>
+          <p>375&#8381;<span>/кг</span></p>
           <a href="#">Сливочно-лимонное с карамельной присыпкой</a>
-          <button type="button" class="visually-hidden">Быстрый просмотр</button>
+          <button type="button">Быстрый просмотр</button>
         </li>
         <li>
           <img src="img/icecream8.png" width="267" height="267" alt="Мороженое шоколадной стружкой">
-          <p>320&#8381;<sub>/кг</sub></p>
+          <p>320&#8381;<span>/кг</span></p>
           <a href="#">Сливочное с шоколадной стружкой</a>
-          <button type="button" class="visually-hidden">Быстрый просмотр</button>
+          <button type="button">Быстрый просмотр</button>
         </li>
 
         <li>
           <img src="img/icecream9.png" width="267" height="267" alt="Сливочно-ванильное мороженое">
-          <p>440&#8381;<sub>/кг</sub></p>
+          <p>440&#8381;<span>/кг</span></p>
           <a href="#">Сливочно-ванильное с кусочками шоколада</a>
-          <button type="button" class="visually-hidden">Быстрый просмотр</button>
+          <button type="button">Быстрый просмотр</button>
         </li>
         <li>
           <img src="img/icecream10.png" width="267" height="267" alt="Мороженое ментоловым сиропом">
-          <p>435&#8381;<sub>/кг</sub></p>
+          <p>435&#8381;<span>/кг</span></p>
           <a href="#">Сливочноe с ментоловым сиропом</a>
-          <button type="button" class="visually-hidden">Быстрый просмотр</button>
+          <button type="button">Быстрый просмотр</button>
         </li>
         <li>
           <img src="img/icecream11.png" width="267" height="267" alt="Мороженое с кусочками черного шоколада">
-          <p>355&#8381;<sub>/кг</sub></p>
+          <p>355&#8381;<span>/кг</span></p>
           <a href="#">Сливочное с кусочками черного шоколада</a>
-          <button type="button" class="visually-hidden">Быстрый просмотр</button>
+          <button type="button">Быстрый просмотр</button>
         </li>
         <li>
           <img src="img/icecream12.png" width="267" height="267" alt="Мороженое с мятным сиропом">
-          <p>420&#8381;<sub>/кг</sub></p>
+          <p>420&#8381;<span>/кг</span></p>
           <a href="#">Сливочное с мятным сиропом</a>
-          <button type="button" class="visually-hidden">Быстрый просмотр</button>
+          <button type="button">Быстрый просмотр</button>
         </li>
       </ul>
       <ul>
@@ -162,63 +207,23 @@
       </ul>
     </section>
   </main>
-  <footer>
+  <footer class="main-footer">
     <ul>
       <li><a href="#"><img src="img/twitter.svg" width="32" height="32" alt="Twitter"></a></li>
       <li><a href="#"><img src="img/instagram.svg" width="32" height="32" alt="Instagram"></a></li>
       <li><a href="#"><img src="img/fb.svg" width="32" height="32" alt="Facebook"></a></li>
       <li><a href="#"><img src="img/vk.svg" width="32" height="32" alt="Vkontakte"></a></li>
     </ul>
-    <ul>
+    <ul class="nav-items">
       <li><a href="#"><b>Для поставщиков</b></a></li>
       <li><a href="#">О производстве</a></li>
       <li><a href="#">Наши документы</a></li>
       <li><a href="#">Экологическе стандарты</a></li>
     </ul>
-    <div>
+    <div class="academy">
       <img src="img/logo-htmlacademy.svg" width="139" height="39" alt="Логотип Академии" >
       <p>Сделано в <a href="https://htmlacademy.ru">HTML Academy</a> © 2019</p>
     </div>
     </footer>
-    <section class="visually-hidden">
-      <h2 class="visually-hidden">Корзина</h2>
-      <!-- форма ли это? Здесь id товара и количество можно сделать скрытыми инпутами либо через js записать у клиента
-      в куках / local storage и передавать в back через ajax на сервер. Как лучше? -->
-      <form action="#" method="post" name="basket-order"></form>
-      <table>
-        <tr>
-          <td><button type="button" aria-label="Удалить товар">X</button></td>
-          <td><img src="img/icecream1-small.png" alt="Сливочно-апельсиновое мороженое" width="33" height="33"></td>
-          <td>Пломбир с апельсиновым джемом</td>
-          <td>1,5 кг Х 200 руб.</td>
-          <td>300 руб.</td>
-        </tr>
-        <tr>
-          <td><button type="button" aria-label="Удалить товар">X</button></td>
-          <td><img src="img/icecream3-small.png" alt="Сливочно-клубничное мороженое" width="33" height="33"></td>
-          <td>Клубничный пломбир с присыпкой из белого шоколада</td>
-          <td>1,5 кг Х 300 руб.</td>
-          <td>450 руб.</td>
-        </tr>
-      </table>
-      <p><b>Итого: 750 руб.</b></p>
-      <button type="submit" name="backet-submit" value="submitted">Оформить заказ</button>
-    </section>
-    <section class="visually-hidden">
-      <h2 class="visually-hidden">Форма входа</h2>
-      <form action="#" method="post" name="auth">
-        <input type="email" placeholder="email@example.com">
-        <input type="password" placeholder="password">
-        <button type="submit" name="auth_submit" value="submitted">Войти</button>
-        <a href="#">Забыли пароль?</a>
-        <a href="#">Новая регистрация</a>
-      </form>
-    </section>
-    <section class="visually-hidden"> <!-- где лучше расположить этот блок? -->
-      <h2 class="visually-hidden">Форма поиска</h2>
-      <form action="#" method="get" name="search">
-        <input type="search" placeholder="Поиск">
-      </form>
-    </section>
   </body>
 </html>
