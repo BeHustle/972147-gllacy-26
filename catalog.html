@@ -16,9 +16,9 @@
     <ul class="nav-list">
       <li class="nav-list-item">
         <a href="catalog.html" class="nav-list-link-current">Каталог</a>
-        <ul class="nav-inner">
+        <ul class="nav-inner d-none">
           <li class="nav-inner-item"><a href="#" class="nav-inner-link"><b>Новинки</b></a></li>
-          <li class="nav-inner-item-current"><a class="nav-inner-link">Сливочное</a></li>
+          <li class="nav-inner-item-current"><a class="nav-inner-link-current">Сливочное</a></li>
           <li class="nav-inner-item"><a href="#" class="nav-inner-link">Щербеты</a></li>
           <li class="nav-inner-item"><a href="#" class="nav-inner-link">Фруктовый лёд</a></li>
           <li class="nav-inner-item"><a href="#" class="nav-inner-link">Мелорин</a></li>
@@ -30,26 +30,30 @@
     <ul class="nav-controls">
       <li class="nav-controls-item">
         <button type="button" class="nav-controls-btn search-btn">Поиск</button>
-        <form action="#" method="get" name="search" class="main-header-form search-form">
-          <input type="search" placeholder="Поиск" class="form-input">
+        <form action="#" method="get" name="search" class="main-header-form search-form d-none">
+          <input type="search" placeholder="Крем-брюле" class="form-input">
         </form>
       </li>
       <li class="nav-controls-item">
         <button type="button" class="nav-controls-btn login-btn">Вход</button>
-        <form action="#" method="post" name="auth" class="main-header-form auth-form">
+        <form action="#" method="post" name="auth" class="main-header-form auth-form d-none">
           <input type="email" placeholder="email@example.com" class="form-input">
           <input type="password" placeholder="password" class="form-input">
-          <button type="submit" class="gradient-button auth-form-login-btn">Войти</button>
-          <a href="#" class="auth-form-link black-link">Забыли пароль?</a>
-          <a href="#" class="auth-form-link black-link">Новая регистрация</a>
+          <div class="auth-form-container">
+            <button type="submit" class="gradient-button auth-form-login-btn">Войти</button>
+            <div class="auth-form-container-links">
+              <a href="#" class="auth-form-link black-link">Забыли пароль?</a>
+              <a href="#" class="auth-form-link black-link">Новая регистрация</a>
+            </div>
+          </div>
         </form>
       </li>
       <li class="nav-controls-item">
         <button type="button" class="nav-controls-btn full-basket-btn">2 товара</button>
-        <section class="main-header-basket">
+        <section class="main-header-basket d-none">
           <h2 class="visually-hidden">Корзина</h2>
           <table class="basket-table">
-            <tr>
+            <tr class="basket-table-item">
               <td>
                 <button type="button" aria-label="Удалить товар" class="basket-table-del-btn"></button>
               </td>
@@ -58,7 +62,7 @@
               <td>1,5 кг Х <span class="basket-table-price">200 руб.</span></td>
               <td>300 руб.</td>
             </tr>
-            <tr>
+            <tr class="basket-table-item">
               <td>
                 <button type="button" aria-label="Удалить товар" class="basket-table-del-btn"></button>
               </td>
@@ -80,53 +84,57 @@
   </div>
 </header>
 <main>
-  <ul class="breadcrumbs">
+  <ul class="breadcrumbs row">
     <li><a href="/" class="white-link">Главная</a></li>
     <li><a href="#" class="white-link">Каталог</a></li>
     <li>Сливочное</li>
   </ul>
-  <h1 class="page-title">Сливочное мороженое</h1>
-  <section>
+  <h1 class="page-title row">Сливочное мороженое</h1>
+  <section class="section-filter row">
     <form action="#" method="get" name="filter-form" class="filter-form">
-      <fieldset>
-        <legend class="filter-form-legend"><label for="order">Сортировка:</label></legend>
-        <select name="order" id="order" class="filter-form-item select">
-          <option value="popular">По популярности</option>
-          <option value="price_asc">Сначала недорогие</option>
-          <option value="price_desc">Сначала дорогие</option>
-          <option value="fat">По жирности</option>
-        </select>
-      </fieldset>
-      <fieldset>
-        <legend class="filter-form-legend">Цена 100 руб. - 500 руб.</legend>
-        <div class="filter-form-item wheel"></div>
-        <!-- ползунок выбора цены -->
-      </fieldset>
-      <fieldset>
-        <legend class="filter-form-legend">Жирность</legend>
-        <ul class="filter-form-item radio">
-          <li><label><input type="radio" name="fat" value="0">0%</label></li>
-          <li><label><input type="radio" name="fat" value="to10" checked>До 10%</label></li>
-          <li><label><input type="radio" name="fat" value="to30">До 30%</label></li>
-          <li><label><input type="radio" name="fat" value="more30">Выше 30%</label></li>
-        </ul>
-      </fieldset>
-      <fieldset>
-        <legend class="filter-form-legend">Наполнители</legend>
-        <ul class="filter-form-item checkbox">
-          <li><label><input type="checkbox" name="chocolate" checked>шоколадные</label></li>
-          <li><label><input type="checkbox" name="sugar" checked>сахарные присыпки</label></li>
-          <li><label><input type="checkbox" name="fruits">фрукты</label></li>
-          <li><label><input type="checkbox" name="syrup">сиропы</label></li>
-          <li><label><input type="checkbox" name="jam">джемы</label></li>
-        </ul>
-      </fieldset>
+      <div class="container-filter-form">
+        <fieldset>
+          <legend class="filter-form-legend"><label for="order">Сортировка:</label></legend>
+          <select name="order" id="order" class="filter-form-item select">
+            <option value="popular">По популярности</option>
+            <option value="price_asc">Сначала недорогие</option>
+            <option value="price_desc">Сначала дорогие</option>
+            <option value="fat">По жирности</option>
+          </select>
+        </fieldset>
+        <fieldset>
+          <legend class="filter-form-legend">Цена 100 руб. - 500 руб.</legend>
+          <div class="filter-form-item wheel"></div>
+          <!-- ползунок выбора цены -->
+        </fieldset>
+        <fieldset>
+          <legend class="filter-form-legend">Жирность</legend>
+          <ul class="filter-form-item radio">
+            <li><label><input type="radio" name="fat" value="0">0%</label></li>
+            <li><label><input type="radio" name="fat" value="to10" checked>До 10%</label></li>
+            <li><label><input type="radio" name="fat" value="to30">До 30%</label></li>
+            <li><label><input type="radio" name="fat" value="more30">Выше 30%</label></li>
+          </ul>
+        </fieldset>
+      </div>
+      <div class="container-filter-form">
+        <fieldset>
+          <legend class="filter-form-legend">Наполнители</legend>
+          <ul class="filter-form-item checkbox">
+            <li><label><input type="checkbox" name="chocolate" checked>шоколадные</label></li>
+            <li><label><input type="checkbox" name="sugar" checked>сахарные присыпки</label></li>
+            <li><label><input type="checkbox" name="fruits">фрукты</label></li>
+            <li><label><input type="checkbox" name="syrup">сиропы</label></li>
+            <li><label><input type="checkbox" name="jam">джемы</label></li>
+          </ul>
+        </fieldset>
       <button type="submit" class="filter-form-button">Применить</button>
+      </div>
     </form>
   </section>
   <section class="products">
-    <h2>Товары</h2>
-    <ul class="products-list">
+    <h2 class="visually-hidden">Товары</h2>
+    <ul class="products-list row">
       <li class="products-item">
         <img src="img/icecream1.png" width="267" height="267" alt="Сливочно-апельсиновое мороженое">
         <p class="products-item-price">310&#8381;<span class="products-item-price-weight">/кг</span></p>
@@ -151,7 +159,8 @@
         <a href="#" class="products-item-link white-link">Сливочное крем-брюле с карамельной подливкой</a>
         <button type="button" class="products-item-btn gradient-button">Быстрый просмотр</button>
       </li>
-
+    </ul>
+    <ul class="products-list row">
       <li class="products-item">
         <img src="img/icecream5.png" width="267" height="267" alt="Мороженое с брусничным джемом">
         <p class="products-item-price">325&#8381;<span class="products-item-price-weight">/кг</span></p>
@@ -176,7 +185,8 @@
         <a href="#" class="products-item-link white-link">Сливочное с шоколадной стружкой</a>
         <button type="button" class="products-item-btn gradient-button">Быстрый просмотр</button>
       </li>
-
+    </ul>
+    <ul class="products-list row">
       <li class="products-item">
         <img src="img/icecream9.png" width="267" height="267" alt="Сливочно-ванильное мороженое">
         <p class="products-item-price">440&#8381;<span class="products-item-price-weight">/кг</span></p>
@@ -202,7 +212,7 @@
         <button type="button" class="products-item-btn gradient-button">Быстрый просмотр</button>
       </li>
     </ul>
-    <ul class="pagination">
+    <ul class="pagination row">
       <li><a class="pagination-link-current">1</a></li>
       <li><a class="pagination-link" href="#">2</a></li>
       <li><a class="pagination-link" href="#">3</a></li>
@@ -211,25 +221,39 @@
     </ul>
   </section>
 </main>
-<footer class="main-footer">
-  <ul class="footer-social-list">
-    <li class="footer-social-item"><a href="#" class="footer-social-item-link"><img src="img/twitter.svg" width="32"
-                                                                                    height="32" alt="Twitter"></a></li>
-    <li class="footer-social-item"><a href="#" class="footer-social-item-link"><img src="img/instagram.svg" width="32"
-                                                                                    height="32" alt="Instagram"></a>
+<footer class="main-footer row">
+  <ul class="footer-social-list"> <!-- как стилизовать этот блок? -->
+    <li class="footer-social-item">
+      <a href="#" class="footer-social-item-link">
+        <img src="img/twitter.svg" width="32" height="32" alt="Twitter">
+      </a>
     </li>
-    <li class="footer-social-item"><a href="#" class="footer-social-item-link"><img src="img/fb.svg" width="32"
-                                                                                    height="32" alt="Facebook"></a></li>
-    <li class="footer-social-item"><a href="#" class="footer-social-item-link"><img src="img/vk.svg" width="32"
-                                                                                    height="32" alt="Vkontakte"></a>
+    <li class="footer-social-item">
+      <a href="#" class="footer-social-item-link">
+        <img src="img/instagram.svg" width="32" height="32" alt="Instagram">
+      </a>
+    </li>
+    <li class="footer-social-item">
+      <a href="#" class="footer-social-item-link">
+        <img src="img/fb.svg" width="32" height="32" alt="Facebook">
+      </a>
+    </li>
+    <li class="footer-social-item">
+      <a href="#" class="footer-social-item-link">
+        <img src="img/vk.svg" width="32" height="32" alt="Vkontakte">
+      </a>
     </li>
   </ul>
-  <ul class="footer-menu-list">
-    <li class="footer-menu-item"><a href="#" class="footer-menu-item-link white-link"><b>Для поставщиков</b></a></li>
-    <li class="footer-menu-item"><a href="#" class="footer-menu-item-link white-link">О производстве</a></li>
-    <li class="footer-menu-item"><a href="#" class="footer-menu-item-link white-link">Наши документы</a></li>
-    <li class="footer-menu-item"><a href="#" class="footer-menu-item-link white-link">Экологическе стандарты</a></li>
-  </ul>
+  <div class="footer-menu-container">
+    <ul class="footer-menu-list">
+      <li class="footer-menu-item"><a href="#" class="footer-menu-item-link white-link"><b>Для поставщиков</b></a></li>
+      <li class="footer-menu-item"><a href="#" class="footer-menu-item-link white-link">О производстве</a></li>
+    </ul>
+      <ul class="footer-menu-list">
+      <li class="footer-menu-item"><a href="#" class="footer-menu-item-link white-link">Наши документы</a></li>
+      <li class="footer-menu-item"><a href="#" class="footer-menu-item-link white-link">Экологическе стандарты</a></li>
+    </ul>
+  </div>
   <div class="footer-academy">
     <img src="img/logo-htmlacademy.svg" width="139" height="39" alt="Логотип Академии">
     <p>Сделано в <a href="https://htmlacademy.ru" class="footer-academy-link white-link">HTML Academy</a> © 2019</p>
