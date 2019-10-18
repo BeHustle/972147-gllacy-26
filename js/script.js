@@ -1,3 +1,10 @@
+$('.wheel-slider').slider({
+  min: 0,
+  max: 100,
+  values: [13,69],
+  range: true
+});
+
 var feedbackOpenBtn = document.querySelector('.feedback-open-btn');
 var feedbackCloseBtn = document.querySelector('.feedback-close-btn');
 var modalFeedback = document.querySelector('.modal-feedback');
