@@ -105,19 +105,19 @@
     <h1 class="visually-hidden">Glaccy - интернет-магазин вкуснейшего мороженого</h1>
     <section class="slider container">
       <ul class="slider-list">
-        <li class="slider-item" id="slide-1">
+        <li class="slider-item slide-1" id="slide-1">
           <h2 class="slider-title">Крем-брюле и пломбир с&nbsp;малиновым&nbsp;джемом</h2>
-          <img src="img/slider-icecream-1.png" width="1079" height="854" alt="Мороженое крем-брюле и пломбир с малиновым джемом">
+          <img src="img/slider-icecream-1.png" width="647" height="584" alt="Мороженое крем-брюле и пломбир с малиновым джемом">
           <a href="#" class="slider-link gradient-button">Давайте оба!</a>
         </li>
-        <li class="slider-item" id="slide-2">
+        <li class="slider-item slide-2" id="slide-2">
           <h2 class="slider-title">Шоколадный пломбир и&nbsp;лимонный&nbsp;сорбет</h2>
-          <img src="img/slider-icecream-2.png" width="1079" height="854" alt="Мороженое шоколадный пломбир и лимонный сорбет">
+          <img src="img/slider-icecream-2.png" width="647" height="584" alt="Мороженое шоколадный пломбир и лимонный сорбет">
           <a href="#" class="slider-link gradient-button">Давайте оба!</a>
         </li>
-        <li class="slider-item" id="slide-3">
+        <li class="slider-item slide-3" id="slide-3">
           <h2 class="slider-title">Пломбир с помадкой и&nbsp;клубничный&nbsp;щербет</h2>
-          <img src="img/slider-icecream-3.png" width="1079" height="854" alt="Мороженое пломбир с помадкой и клубничный щербет">
+          <img src="img/slider-icecream-3.png" width="647" height="584" alt="Мороженое пломбир с помадкой и клубничный щербет">
           <a href="#" class="slider-link gradient-button">Давайте оба!</a>
         </li>
       </ul>
@@ -138,20 +138,22 @@
 
     <section class="container promo">
       <h2 class="visually-hidden">Акции</h2>
-      <article class="promo-column action raspberry-bg">
+      <div class="promo-container"> <!-- для совместимости с IE11 -->
+        <article class="promo-column action raspberry-bg">
         <h3 class="action-title">Малинка даром!</h3>
         <p class="action-description">
           При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.
         </p>
         <a href="#" class="gradient-button action-button">Хочу варенье!</a>
       </article>
-      <article class="promo-column action choco-bg">
+        <article class="promo-column action choco-bg">
         <h3 class="action-title">Шоколадки даром!</h3>
         <p class="action-description">
           При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.
         </p>
         <a href="#" class="gradient-button action-button">Хочу шоколадки!</a>
       </article>
+      </div>
     </section>
 
     <section class="products container">
@@ -160,8 +162,7 @@
         <li class="products-item hit">
           <img src="img/icecream1.png" width="267" height="267" alt="Сливочно-апельсиновое мороженое">
           <p class="products-item-price">
-            310<span class="ruble">&#8381;</span>
-            <span class="products-item-price-weight">/кг</span>
+            310<span class="ruble">&#8381;</span><span class="products-item-price-weight">/кг</span>
           </p>
           <a href="#" class="products-item-link">
             <span class="white-link">Сливочное с апельсиновым джемом и цитрусовой стружкой</span>
@@ -171,8 +172,7 @@
         <li class="products-item hit">
           <img src="img/icecream2.png" width="267" height="267" alt="Сливочно-кофейное мороженое">
           <p class="products-item-price">
-            380<span class="ruble">&#8381;</span>
-            <span class="products-item-price-weight">/кг</span>
+            380<span class="ruble">&#8381;</span><span class="products-item-price-weight">/кг</span>
           </p>
           <a href="#" class="products-item-link">
             <span class="white-link">Сливочно-кофейное с кусочками шоколада</span>
@@ -182,8 +182,7 @@
         <li class="products-item hit">
           <img src="img/icecream3.png" width="267" height="267" alt="Сливочно-клубничное мороженое">
           <p class="products-item-price">
-            355<span class="ruble">&#8381;</span>
-            <span class="products-item-price-weight">/кг</span>
+            355<span class="ruble">&#8381;</span><span class="products-item-price-weight">/кг</span>
           </p>
           <a href="#" class="products-item-link"><span class="white-link">Сливочно-клубничное с присыпкой из белого шоколада</span></a>
           <button type="button" class="products-item-btn gradient-button">Быстрый просмотр</button>
@@ -191,8 +190,7 @@
         <li class="products-item hit">
           <img src="img/icecream4.png" width="267" height="267" alt="Мороженое крем-брюле">
           <p class="products-item-price">
-            415<span class="ruble">&#8381;</span>
-            <span class="products-item-price-weight">/кг</span>
+            415<span class="ruble">&#8381;</span><span class="products-item-price-weight">/кг</span>
           </p>
           <a href="#" class="products-item-link">
             <span class="white-link">Сливочное крем-брюле с карамельной подливкой</span>
@@ -229,8 +227,8 @@
         <h2 class="blog-title">Новое в нашем блоге</h2>
         <a href="#" class="blog-link black-link">10 способов сервировки фруктовых щербетов к столу</a>
       </section>
-      <div class="subscribe-background">
-        <section class="subscribe">
+      <section class="subscribe">
+        <div class="subscribe-container">
           <h2 class="visually-hidden">Подписка на новости</h2>
           <p class="subscribe-description">
             Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого
@@ -242,8 +240,8 @@
               Отправить
             </button>
           </form>
-        </section>
-      </div>
+        </div>
+      </section>
     </div>
     <section class="contacts">
       <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A0b8d0c52a1d7645594cb64c2e521c0f53c843d3241e3e2dfd795b1e523ab6952&amp;source=constructor" class="map"></iframe>
