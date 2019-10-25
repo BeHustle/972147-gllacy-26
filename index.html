@@ -8,18 +8,18 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-<input type="radio" class="visually-hidden" id="product-1" name="toggle" checked>
-<input type="radio" class="visually-hidden" id="product-2" name="toggle">
-<input type="radio" class="visually-hidden" id="product-3" name="toggle">
+<input type="radio" class="visually-hidden" id="product-1" name="toggle" aria-label="Первый слайд" checked>
+<input type="radio" class="visually-hidden" id="product-2" name="toggle" aria-label="Второй слайд">
+<input type="radio" class="visually-hidden" id="product-3" name="toggle" aria-label="Третий слайд">
 <div class="site-wrapper">
   <header class="main-header container">
     <nav class="main-nav">
-      <a>
-        <img src="img/logo.svg" width="154" height="64" alt="Логотип Glaccy">
+      <a aria-label="Главная Glaccy">
+        <img src="img/logo.svg" width="154" height="64" alt="Glaccy">
       </a>
       <ul class="nav-list">
         <li class="nav-list-item nav-catalog">
-          <a href="#" class="nav-list-link"><span class="nav-list-link-border">Каталог</span></a>
+          <a href="#" class="nav-list-link" aria-label="Каталог"><span class="nav-list-link-border">Каталог</span></a>
           <div class="nav-inner-container">
             <ul class="nav-inner">
               <li class="nav-inner-item">
@@ -41,12 +41,12 @@
           </div>
         </li>
         <li class="nav-list-item">
-          <a href="delivery.html" class="nav-list-link">
+          <a href="delivery.html" class="nav-list-link" aria-label="Доставка и оплата">
           <span class="nav-list-link-border">Доставка и оплата</span>
         </a>
         </li>
         <li class="nav-list-item">
-          <a href="about.html" class="nav-list-link">
+          <a href="about.html" class="nav-list-link" aria-label="О Компании">
           <span class="nav-list-link-border">О Компании</span></a></li>
       </ul>
       <ul class="nav-controls">
@@ -58,12 +58,12 @@
           </a>
           <div class="search-form-container">
             <form action="#" method="get" name="search" class="main-header-form search-form">
-              <input type="search" placeholder="Крем-брюле" class="form-input">
+              <input type="search" placeholder="Крем-брюле" class="form-input" aria-label="Введите текст для поиска">
             </form>
           </div>
         </li>
         <li class="nav-controls-item nav-login">
-          <a href="#" class="nav-controls-btn login-btn">
+          <a href="#" class="nav-controls-btn login-btn" aria-label="Войти на сайт">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="19" viewBox="0 0 21 19">
               <path d="M6 14.875L12.917 9.5 6 4.125v2.917H-.042v4.917H6z" fill="#fff"/>
               <path d="M18 0H5C3.9 0 3 .9 3 2v2h2V2h13v15H5v-2H3v2c0 1.1.9 2 2 2h13c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z" fill="#fff"/>
@@ -72,8 +72,8 @@
           </a>
           <div class="auth-form-container">
             <form action="#" method="post" name="auth" class="main-header-form auth-form">
-              <input type="email" placeholder="email@example.com" class="form-input" required>
-              <input type="password" placeholder="******" class="form-input" required>
+              <input type="email" placeholder="email@example.com" class="form-input" aria-label="Ввести email"  required>
+              <input type="password" placeholder="******" class="form-input" aria-label="Ввести email"  required>
               <div class="auth-form-controls">
                 <button type="submit" class="gradient-button auth-form-login-btn">Войти</button>
                 <div class="auth-form-links">
@@ -85,7 +85,7 @@
           </div>
         </li>
         <li class="nav-controls-item nav-basket">
-          <a href="#" class="nav-controls-btn empty-basket-btn">
+          <a href="#" class="nav-controls-btn empty-basket-btn" aria-label="Корзина">
             <svg xmlns="http://www.w3.org/2000/svg" width="21" height="19" viewBox="0 0 21 19">
               <path d="M5.657 2.031L5.422 0H0v2h3.64l1.5 13h13.988l1.699-12.969H5.657zM17.372 13H6.922L5.888 4.031h12.66L17.372 13z" fill="#fff"/>
               <circle cx="6.984" cy="18" r="2" fill="#fff"/>
@@ -98,11 +98,11 @@
     </nav>
     <div class="main-header-contacts">
       <p>С 10 до 20, ежедневно</p>
-      <a href="tel:88124504225" class="white-link">8 812 450-25-25</a>
+      <a href="tel:88124504225" class="white-link" aria-label="Позвонить в Glaccy">8 812 450-25-25</a>
     </div>
   </header>
   <main>
-    <h1 class="visually-hidden">Glaccy - интернет-магазин вкуснейшего мороженого</h1>
+    <h1 class="visually-hidden">Glaccy - интернет-магазин мороженого</h1>
     <section class="slider container">
       <ul class="slider-list">
         <li class="slider-item slide-1" id="slide-1">
@@ -124,13 +124,13 @@
       <nav class="slider-nav">
         <ul>
           <li>
-            <label for="product-1" class="slider-btn"></label>
+            <label for="product-1" class="slider-btn" aria-label="Открыть первый слайд"></label>
           </li>
           <li>
-            <label for="product-2" class="slider-btn"></label>
+            <label for="product-2" class="slider-btn" aria-label="Открыть второй слайд"></label>
           </li>
           <li>
-            <label for="product-3" class="slider-btn"></label>
+            <label for="product-3" class="slider-btn" aria-label="Открыть третий слайд"></label>
           </li>
         </ul>
       </nav>
@@ -235,8 +235,8 @@
             вкусного, что у нас происходит.
             Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
           <form action="#" method="post" name="subscribe" class="subscribe-form">
-            <input type="email" name="email" placeholder="email@example.com" class="form-input subscribe-form-input" required>
-            <button type="submit" name="subscribe_submit" value="submitted" class="subscribe-form-btn gradient-button">
+            <input type="email" name="email" placeholder="email@example.com" class="form-input subscribe-form-input" aria-label="Введите ваш email" required>
+            <button type="submit" name="subscribe_submit" value="submitted" class="subscribe-form-btn gradient-button" aria-label="Подписаться на новости">
               Отправить
             </button>
           </form>
@@ -250,7 +250,7 @@
           <h2 class="contacts-info-title">Адрес главного офиса и&nbsp;офлайн-магазина:</h2>
           <p class="contacts-info-address"><b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b></p>
           <p class="contacts-info-order">Для заказов по телефону:</p>
-          <a href="tel:88124502525" class="contacts-info-tel black-link">8 812 450-25-25</a>
+          <a href="tel:88124502525" class="contacts-info-tel black-link" aria-label="Позвонить в Glaccy">8 812 450-25-25</a>
           <p class="contacts-info-mode">(с 10 до 20 ежедневно)</p>
           <a href="#" class="feedback-open-btn gradient-button">Форма обратной связи</a>
         </div>
@@ -260,14 +260,14 @@
   <footer class="main-footer container">
     <ul class="footer-social-list">
       <li class="footer-social-item">
-        <a href="#" class="footer-social-item-link" aria-label="Twitter">
+        <a href="#" class="footer-social-item-link" aria-label="Перейти в Twitter Glaccy">
           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
             <path fill="#ffffff" d="M16 0C7.164 0 0 7.164 0 16c0 8.837 7.164 16 16 16 8.837 0 16-7.163 16-16 0-8.836-7.163-16-16-16zm7.944 12.809c-.251 6.516-3.463 10.832-10.992 10.702h-.486c-.447 0-4.543-.443-5.344-1.823 2.479.19 4.247-.406 5.12-1.136-1.048-.289-2.923-.461-3.251-2.848.384.104.618.221 1.299.113-1.307-.824-2.758-1.519-2.679-3.643.311.317 1.164.518 1.46.457-.768-.233-2.149-3.244-.974-4.781 1.984 1.79 4.075 3.482 7.804 3.643.227-2.214 1.24-3.699 3.168-4.325 1.84-.479 3.255.26 3.901 1.138.737-.224 1.453-.466 2.193-.685-.004.833-.569 1.463-.935 1.709.747.165 1.423-.475 1.423-.475-.184.963-1.094 1.725-1.707 1.954z"/>
           </svg>
         </a>
       </li>
       <li class="footer-social-item">
-        <a href="#" class="footer-social-item-link" aria-label="Instagram">
+        <a href="#" class="footer-social-item-link" aria-label="Перейти в Instagram Glaccy">
           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
             <g fill="#FFF">
               <path d="M20.916 16a4.938 4.938 0 1 1-9.877 0c0-.394.051-.773.138-1.14h-.897v6.838h11.396V14.86h-.897c.086.367.137.746.137 1.14z"/>
@@ -278,14 +278,14 @@
         </a>
       </li>
       <li class="footer-social-item">
-        <a href="#" class="footer-social-item-link" aria-label="Facebook">
+        <a href="#" class="footer-social-item-link" aria-label="Перейти в Facebook Glaccy">
           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
             <path fill="#FFF" d="M16 0C7.164 0 0 7.163 0 16s7.164 16 16 16c8.837 0 16-7.164 16-16S24.837 0 16 0zm4.062 9.455h-3.021v3.444h3.021v3.445h-3.021v8.61H14.02v-8.61H11v-3.445h3.021V9.455c0-1.902 1.353-3.445 3.021-3.445h3.021v3.445z"/>
           </svg>
         </a>
       </li>
       <li class="footer-social-item">
-        <a href="#" class="footer-social-item-link" aria-label="Вконтакте">
+        <a href="#" class="footer-social-item-link" aria-label="Перейти во Вконтакте Glaccy">
           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
             <g fill="#FFF">
               <path d="M16.637 14.495c.402-.019.719-.082.951-.188.326-.145.54-.33.641-.559.101-.229.15-.496.15-.797 0-.232-.058-.465-.174-.697-.116-.232-.322-.405-.617-.517-.264-.1-.592-.155-.984-.165a76.242 76.242 0 0 0-1.652-.014h-.339v2.965h.565c.571 0 1.057-.009 1.459-.028zM18.118 17.084c-.282-.081-.672-.125-1.166-.132a127.97 127.97 0 0 0-1.55-.009h-.79v3.493h.264c1.014 0 1.74-.003 2.18-.009a3.2 3.2 0 0 0 1.212-.245c.377-.157.633-.364.774-.625s.214-.562.214-.9c0-.446-.088-.788-.261-1.03-.17-.241-.464-.423-.877-.543z"/>
@@ -302,7 +302,7 @@
       <li class="footer-menu-item"><a href="#" class="footer-menu-item-link white-link">Экологические стандарты</a></li>
     </ul>
     <div class="footer-academy">
-      <a href="https://htmlacademy.ru/intensive/htmlcss">
+      <a href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Перейти в HTML Academy">
         <img src="img/logo-htmlacademy.svg" width="108" height="39" alt="HTML Academy">
       </a>
       <p>
@@ -314,9 +314,9 @@
   <section class="modal-feedback d-none">
     <h2 class="modal-feedback-title">Мы обязательно вам ответим</h2>
     <form action="#" method="post" name="feedback" class="modal-feedback-form">
-      <input type="text" name="full-name" placeholder="Имя Фамилия" class="feedback-name form-input">
-      <input type="email" name="email" placeholder="email@example.com" class="feedback-email form-input">
-      <textarea name="feedback-text" rows="5" placeholder="В свободной форме" class="feedback-text form-input"></textarea>
+      <input type="text" name="full-name" placeholder="Имя Фамилия" class="feedback-name form-input" aria-label="Введите ваше имя и фамилию">
+      <input type="email" name="email" placeholder="email@example.com" class="feedback-email form-input" aria-label="Введите ваш email">
+      <textarea name="feedback-text" rows="5" placeholder="В свободной форме" class="feedback-text form-input" aria-label="Введите ваш вопрос"></textarea>
       <button type="submit" class="modal-feedback-form-btn gradient-button">Отправить</button>
     </form>
     <button type="button" aria-label="Закрыть форму" class="feedback-close-btn">

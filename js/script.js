@@ -1,3 +1,5 @@
+$('.filter-form-price').addClass('d-none');
+$('.wheel-slider').removeClass('d-none');
 $('.wheel-slider').slider({
   min: 0,
   max: 100,
